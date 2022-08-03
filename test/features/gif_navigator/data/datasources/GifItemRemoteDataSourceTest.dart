@@ -22,9 +22,9 @@ void main() {
   test(
     'should perform a GET request on /search',
     () async {
-      when(mockRestClient.getGifItems()).thenAnswer((_) async => fixture('gif_items.json'));
-      gifItemRemoteDataSourceImpl.getGifItems();
-      verify(mockRestClient.getGifItems());
+      when(mockRestClient.getGifItems("birthday")).thenAnswer((_) async => fixture('gif_items.json'));
+      gifItemRemoteDataSourceImpl.getGifItems("birthday");
+      verify(mockRestClient.getGifItems("birthday"));
     },
   );
 }
