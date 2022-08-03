@@ -1,11 +1,9 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:retrofit/retrofit.dart';
-
-import 'features/gif_navigator/data/datasources/RestClient.dart';
+import 'injection_container.dart' as di;
 
 Future<void> main() async {
   runApp(const MyApp());
+  await di.init();
 }
 
 class MyApp extends StatelessWidget {
