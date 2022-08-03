@@ -3,6 +3,7 @@ import 'dart:convert';
 import '../../domain/entities/GifItem.dart';
 
 class GifItemModel extends GifItem {
+
   const GifItemModel({required String url}) : super(url: url);
 
   static List<GifItemModel> parseGifItemsJsonResult(String jsonResult) {

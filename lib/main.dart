@@ -1,24 +1,11 @@
-import 'dart:convert';
-
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:retrofit/retrofit.dart';
 
-void main() {
+import 'features/gif_navigator/data/datasources/RestClient.dart';
 
+Future<void> main() async {
   runApp(const MyApp());
-
-
-
-
-  var jsonString = '{"data":[{"images":{"original":{"url":"bla bla google"}}},{"images":{"original":{"url":"bla bla google"}}}]}';
-  var data = jsonDecode(jsonString);
-  List<dynamic> dataArray = data["data"];
-  dataArray.forEach((element) {
-    print(element["images"]["original"]["url"]);
-  });
-
-
-
-
 }
 
 class MyApp extends StatelessWidget {

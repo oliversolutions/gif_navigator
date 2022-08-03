@@ -6,8 +6,7 @@ import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
   const gifItemModel = GifItemModel(
-      url:
-          'https://media3.giphy.com/media/g5R9dok94mrIvplmZd/giphy.gif?cid=a0caed7f5eqkv6ovitcfd4ok82ti76yngwxl7daridibcm6q&rid=giphy.gif&ct=g'
+      url: 'https://media3.giphy.com/media/g5R9dok94mrIvplmZd/giphy.gif?cid=a0caed7f5eqkv6ovitcfd4ok82ti76yngwxl7daridibcm6q&rid=giphy.gif&ct=g'
   );
   test(
     'should be a subclass of GifItem entity',
