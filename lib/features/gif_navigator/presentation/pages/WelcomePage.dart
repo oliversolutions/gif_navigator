@@ -30,12 +30,18 @@ class SearchForm extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
           child: TextField(
             onSubmitted: (value) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => GifItemsPage(query: value),
-                ),
-              );
+              if (value.isNotEmpty) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GifItemsPage(query: value),
+                  ),
+                );
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text('Search term cannot be empty'),
+                ));
+              }
             },
             decoration: const InputDecoration(
                 border: OutlineInputBorder(), hintText: 'Enter a search term'),

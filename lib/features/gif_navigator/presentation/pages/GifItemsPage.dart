@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../injection_container.dart';
 import '../../domain/entities/GifItem.dart';
 import '../bloc/gif_items_bloc.dart';
+import '../widgets/LoadingWidget.dart';
 
 class GifItemsPage extends StatelessWidget {
   static const String id = 'gif_items_page';
@@ -18,7 +18,7 @@ class GifItemsPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Gif Pages'),
+          title: const Text('Gif Pages'),
         ),
         body: SingleChildScrollView(
           child: buildBody(context),
@@ -35,27 +35,26 @@ class GifItemsPage extends StatelessWidget {
           BlocBuilder<GifItemsBloc, GifItemsState>(
             builder: (context, state) {
               if (state is Empty) {
-                return GestureDetector(child: Text("Empty"),onTap: () {
-                  BlocProvider.of<GifItemsBloc>(context).add(GetGifItemsEvent(this.query));
-                });
+                BlocProvider.of<GifItemsBloc>(context).add(GetGifItemsEvent(query));
+                return LoadingWidget();
               } else if (state is Loading) {
-                return Text("Loading");
+                return LoadingWidget();
               } else if (state is Loaded) {
-                List<GifItem> gifItems = state.gifItems;
+                List<Image> images = [];
+                for (var element in state.gifItems) {
+                  images.add(Image.network(element.url));
+                }
                 return GridView(
                   shrinkWrap: true,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                   ),
-                  children: [
-                    Image.network('https://picsum.photos/250?image=1'),
-                    Image.network('https://picsum.photos/250?image=2'),
-                    Image.network('https://picsum.photos/250?image=3'),
-                    Image.network('https://picsum.photos/250?image=4'),
-                  ],
+                  children: images,
                 );
+              } else if(state is Error) {
+                return Text(state.message);
               } else {
-                return Text("Not found");
+                return const Text('Error not found');
               }
             },
           ),
