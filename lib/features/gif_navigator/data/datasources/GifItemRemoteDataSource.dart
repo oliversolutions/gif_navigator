@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:gif_navigator/features/gif_navigator/data/datasources/RestClient.dart';
 import 'package:gif_navigator/features/gif_navigator/data/models/GifItemModel.dart';
@@ -7,7 +8,7 @@ import '../../../../core/error/Exceptions.dart';
 import '../../domain/entities/GifItem.dart';
 
 abstract class GifItemRemoteDataSource {
-  Future<List<GifItem>>? getGifItems();
+  Future<List<GifItem>>? getGifItems(String query);
 }
 class GifItemRemoteDataSourceImpl implements GifItemRemoteDataSource {
 
@@ -16,11 +17,12 @@ class GifItemRemoteDataSourceImpl implements GifItemRemoteDataSource {
   GifItemRemoteDataSourceImpl({required this.restClient});
 
   @override
-  Future<List<GifItem>>? getGifItems() {
-    restClient.getGifItems()?.then((it) {
-      return GifItemModel.parseGifItemsJsonResult(it);
-    }).catchError((Object obj) {
+  Future<List<GifItem>>? getGifItems(String query) async {
+    try {
+      final result = await restClient.getGifItems(query);
+      return GifItemModel.parseGifItemsJsonResult(result!);
+    } catch(e) {
       throw ServerException();
-    });
+    }
   }
 }

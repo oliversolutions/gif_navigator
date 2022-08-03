@@ -3,5 +3,5 @@ import 'package:gif_navigator/features/gif_navigator/domain/entities/GifItem.dar
 import '../../../../core/error/Failures.dart';
 
 abstract class GifItemRepository {
-  Future<Either<Failure, List<GifItem>>>? getGifItems();
+  Future<Either<Failure, List<GifItem>>>? getGifItems(String query);
 }

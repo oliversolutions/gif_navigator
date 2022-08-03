@@ -20,7 +20,7 @@ class GifItemsBloc extends Bloc<GifItemsEvent, GifItemsState> {
   _callUseCase(GifItemsEvent event, Emitter<GifItemsState> emit) async {
     if (event is GetGifItemsEvent) {
       emit(Loading());
-      final failureOrGifItems = await getGifItems();
+      final failureOrGifItems = await getGifItems(event.query);
       failureOrGifItems?.fold(
         (failure) => emit(Error(message: SERVER_FAILURE_MESSAGE)),
         (gifItems) => emit(Loaded(gifItems: gifItems)),
