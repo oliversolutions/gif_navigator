@@ -16,7 +16,7 @@ class GifItemsPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Gif Pages'),
+          title: const Text('Gif list'),
         ),
         body: SingleChildScrollView(
           child: buildBody(context),
