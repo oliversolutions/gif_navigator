@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:gif_navigator/features/gif_navigator/presentation/widgets/GridWidget.dart';
 import '../../../../injection_container.dart';
-import '../../domain/entities/GifItem.dart';
 import '../bloc/gif_items_bloc.dart';
 import '../widgets/LoadingWidget.dart';
 
@@ -44,13 +42,7 @@ class GifItemsPage extends StatelessWidget {
                 for (var element in state.gifItems) {
                   images.add(Image.network(element.url));
                 }
-                return GridView(
-                  shrinkWrap: true,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                  ),
-                  children: images,
-                );
+                return GridWidget(gifImages: images);
               } else if(state is Error) {
                 return Text(state.message);
               } else {
