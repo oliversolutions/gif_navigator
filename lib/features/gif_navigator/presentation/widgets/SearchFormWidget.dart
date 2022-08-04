@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../pages/GifItemsPage.dart';
 
 class SearchFormWidget extends StatelessWidget {

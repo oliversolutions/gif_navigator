@@ -5,7 +5,6 @@ abstract class GifItemsState extends Equatable {
   List<Object> get props => [];
 }
 
-
 class Empty extends GifItemsState {}
 
 class Loading extends GifItemsState {}

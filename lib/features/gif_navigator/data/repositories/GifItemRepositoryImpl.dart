@@ -1,4 +1,3 @@
-
 import 'package:dartz/dartz.dart';
 import 'package:gif_navigator/core/error/Exceptions.dart';
 import 'package:gif_navigator/features/gif_navigator/data/datasources/GifItemRemoteDataSource.dart';

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import '../../domain/entities/GifItem.dart';
 
 class GifItemModel extends GifItem {
