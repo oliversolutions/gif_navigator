@@ -9,10 +9,18 @@ class GridWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView(
       shrinkWrap: true,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: getColumnCount(context),
       ),
       children: gifImages,
     );
   }
+
+  int getColumnCount(BuildContext context) {
+    double minTileWidth = 250;
+    double availableWidth = MediaQuery.of(context).size.width;
+    int i = availableWidth ~/ minTileWidth;
+    return i;
+  }
+
 }
