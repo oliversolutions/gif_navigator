@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/gif_navigator/presentation/pages/WelcomePage.dart';
+import 'features/login/presentation/pages/LoginPage.dart';
 import 'injection_container.dart' as di;
 
 Future<void> main() async {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: WelcomePage()
+      home: LoginPage()
     );
   }
 }

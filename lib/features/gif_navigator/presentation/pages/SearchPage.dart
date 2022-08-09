@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import '../widgets/SearchFormWidget.dart';
 
-class WelcomePage extends StatelessWidget {
-  static const String id = 'welcome_page';
-
-  const WelcomePage({Key? key}) : super(key: key);
-
+class SearchPage extends StatelessWidget {
+  const SearchPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     const appTitle = 'Gif navigator';
