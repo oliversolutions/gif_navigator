@@ -18,15 +18,18 @@ class _RestClient implements RestClient {
   String? baseUrl;
 
   @override
-  Future<String>? getGifItems(query) async {
+  Future<String>? getGifItems(query, pagination) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'q': query};
+    final queryParameters = <String, dynamic>{
+      r'q': query,
+      r'offset': pagination
+    };
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<String>(_setStreamType<String>(
         Options(method: 'GET', headers: _headers, extra: _extra)
             .compose(_dio.options,
-                '/search?api_key=B2fsdehjiNPc4gIokSAlu7F3YYMR1JF7&limit=25',
+                '/search?api_key=B2fsdehjiNPc4gIokSAlu7F3YYMR1JF7&limit=20',
                 queryParameters: queryParameters, data: _data)
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = _result.data!;

@@ -11,9 +11,9 @@ class GifItemRepositoryImpl implements GifItemRepository {
     required this.remoteDataSource
   });
   @override
-  Future<Either<Failure, List<GifItem>>>? getGifItems(String query) async {
+  Future<Either<Failure, List<GifItem>>>? getGifItems(String query, String pagination) async {
     try {
-      final gifItemsList = await remoteDataSource.getGifItems(query);
+      final gifItemsList = await remoteDataSource.getGifItems(query, pagination);
       return Right(gifItemsList!);
     } on ServerException {
       return Left(ServerFailure());

@@ -6,7 +6,7 @@ import '../../../../core/error/Failures.dart';
 class GetGifItems {
   final GifItemRepository repository;
   GetGifItems(this.repository);
-  Future<Either<Failure, List<GifItem>>?> call(String query) async {
-    return await repository.getGifItems(query);
+  Future<Either<Failure, List<GifItem>>?> call(String query, String pagination) async {
+    return await repository.getGifItems(query, pagination);
   }
 }

@@ -6,7 +6,8 @@ abstract class GifItemsEvent extends Equatable {
 }
 class GetGifItemsEvent extends GifItemsEvent {
   final String query;
-  GetGifItemsEvent(this.query);
+  final String pagination;
+  GetGifItemsEvent(this.query, this.pagination);
   @override
-  List<Object> get props => [query];
+  List<Object> get props => [query, pagination];
 }

@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 class GridWidget extends StatelessWidget {
 
-  final List<Image> gifImages;
-  const GridWidget({required this.gifImages});
+  final List<GestureDetector> gifImages;
+  final ScrollController scrollController;
+  const GridWidget({required this.gifImages, required this.scrollController});
 
   @override
   Widget build(BuildContext context) {
     return GridView(
+      controller: scrollController,
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: getColumnCount(context),

@@ -28,15 +28,15 @@ void main() {
   test(
     'should get gif items from the repository',
     () async {
-      when(mockGifItemRepository.getGifItems("birthday"))
+      when(mockGifItemRepository.getGifItems("birthday", "0"))
           .thenAnswer((_) async => Right(gifItems));
 
       // The "act" phase of the test. Call the not-yet-existent method.
-      final result = await usecase("birthday");
+      final result = await usecase("birthday", "0");
       // UseCase should simply return whatever was returned from the Repository
       expect(result, Right(gifItems));
       // Verify that the method has been called on the Repository
-      verify(mockGifItemRepository.getGifItems("birthday"));
+      verify(mockGifItemRepository.getGifItems("birthday", "0"));
       // Only the above method should be called and nothing more.
       verifyNoMoreInteractions(mockGifItemRepository);
     },

@@ -21,9 +21,9 @@ void main() {
   test(
     'should perform a GET request on /search',
     () async {
-      when(mockRestClient.getGifItems("birthday")).thenAnswer((_) async => fixture('gif_items.json'));
-      gifItemRemoteDataSourceImpl.getGifItems("birthday");
-      verify(mockRestClient.getGifItems("birthday"));
+      when(mockRestClient.getGifItems("birthday", "0")).thenAnswer((_) async => fixture('gif_items.json'));
+      gifItemRemoteDataSourceImpl.getGifItems("birthday", "0");
+      verify(mockRestClient.getGifItems("birthday", "0"));
     },
   );
 }

@@ -6,9 +6,7 @@ abstract class GifItemsState extends Equatable {
 }
 
 class Empty extends GifItemsState {}
-
 class Loading extends GifItemsState {}
-
 class Loaded extends GifItemsState {
   final List<GifItem> gifItems;
   Loaded({required this.gifItems});

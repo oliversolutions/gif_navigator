@@ -36,12 +36,12 @@ void main() {
       'should return remote data when the call to remote data source is successful',
           () async {
         // arrange
-        when(mockGifItemRemoteDataSource.getGifItems("birthday"))
+        when(mockGifItemRemoteDataSource.getGifItems("birthday", "0"))
             .thenAnswer((_) async => gifItems);
         // act
-        final result = await repository.getGifItems("birthday");
+        final result = await repository.getGifItems("birthday", "0");
         // assert
-        verify(mockGifItemRemoteDataSource.getGifItems("birthday"));
+        verify(mockGifItemRemoteDataSource.getGifItems("birthday", "0"));
         expect(result, equals(Right(gifItems)));
       },
     );
@@ -49,12 +49,12 @@ void main() {
       'should return server failure when the call to remote data source is unsuccessful',
           () async {
         // arrange
-        when(mockGifItemRemoteDataSource.getGifItems("birthday"))
+        when(mockGifItemRemoteDataSource.getGifItems("birthday", "0"))
             .thenThrow(ServerException());
         // act
-        final result = await repository.getGifItems("birthday");
+        final result = await repository.getGifItems("birthday", "0");
         // assert
-        verify(mockGifItemRemoteDataSource.getGifItems("birthday"));
+        verify(mockGifItemRemoteDataSource.getGifItems("birthday", "0"));
         expect(result, equals(Left(ServerFailure())));
       },
     );
