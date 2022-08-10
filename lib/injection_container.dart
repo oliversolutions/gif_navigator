@@ -1,17 +1,17 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:gif_navigator/features/gif_navigator/data/datasources/GifItemRemoteDataSource.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/repositories/GifItemRepository.dart';
-import 'package:gif_navigator/features/login/data/datasources/UserLocalDataSource.dart';
-import 'package:gif_navigator/features/login/domain/usescases/Login.dart';
+import 'package:gif_navigator/features/gif_navigator/data/datasources/gif_item_remote_data_source.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/repositories/gif_item_repository.dart';
+import 'package:gif_navigator/features/login/data/datasources/user_local_data_source.dart';
+import 'package:gif_navigator/features/login/domain/usescases/login.dart';
 
-import 'features/gif_navigator/data/datasources/RestClient.dart';
-import 'features/gif_navigator/data/repositories/GifItemRepositoryImpl.dart';
-import 'features/gif_navigator/domain/usescases/GetGifItems.dart';
+import 'features/gif_navigator/data/datasources/rest_client.dart';
+import 'features/gif_navigator/data/repositories/gif_item_repository_impl.dart';
+import 'features/gif_navigator/domain/usescases/get_gif_items.dart';
 import 'features/gif_navigator/presentation/bloc/gif_items_bloc.dart';
-import 'features/login/data/datasources/UserGenerator.dart';
-import 'features/login/data/repositories/UserRepositoryImpl.dart';
-import 'features/login/domain/repositories/UserRepository.dart';
+import 'features/login/data/datasources/user_generator.dart';
+import 'features/login/data/repositories/user_repository_impl.dart';
+import 'features/login/domain/repositories/user_repository.dart';
 import 'features/login/presentation/bloc/user_bloc.dart';
 
 final sl = GetIt.instance;

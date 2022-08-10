@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/entities/GifItem.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/repositories/GifItemRepository.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/usescases/GetGifItems.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/entities/gif_item.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/repositories/gif_item_repository.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/usescases/get_gif_items.dart';
 import 'package:mockito/mockito.dart';
 
 class MockGifItemRepository extends Mock implements GifItemRepository {}

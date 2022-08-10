@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:gif_navigator/core/error/Exceptions.dart';
-import 'package:gif_navigator/features/gif_navigator/data/datasources/GifItemRemoteDataSource.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/repositories/GifItemRepository.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/repositories/gif_item_repository.dart';
 import '../../../../core/error/Failures.dart';
-import '../../domain/entities/GifItem.dart';
+import '../../domain/entities/gif_item.dart';
+import '../datasources/gif_item_remote_data_source.dart';
 
 class GifItemRepositoryImpl implements GifItemRepository {
   final GifItemRemoteDataSource remoteDataSource;

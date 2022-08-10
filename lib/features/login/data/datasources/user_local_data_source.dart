@@ -1,5 +1,5 @@
-import 'package:gif_navigator/features/login/domain/entities/User.dart';
-import 'UserGenerator.dart';
+import 'package:gif_navigator/features/login/domain/entities/user.dart';
+import 'user_generator.dart';
 
 abstract class UserLocalDataSource {
   List<User> getUsers();

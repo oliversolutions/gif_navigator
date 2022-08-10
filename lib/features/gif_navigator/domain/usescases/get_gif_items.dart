@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/entities/GifItem.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/repositories/GifItemRepository.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/entities/gif_item.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/repositories/gif_item_repository.dart';
 import '../../../../core/error/Failures.dart';
 
 class GetGifItems {

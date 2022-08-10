@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gif_navigator/features/gif_navigator/data/models/GifItemModel.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/entities/GifItem.dart';
+import 'package:gif_navigator/features/gif_navigator/data/models/gif_item_model.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/entities/gif_item.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {

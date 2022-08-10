@@ -1,4 +1,4 @@
-import '../models/UserModel.dart';
+import '../models/user_model.dart';
 
 class UserGenerator {
   List<UserModel> getUsers() {

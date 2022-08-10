@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gif_navigator/features/gif_navigator/data/datasources/GifItemRemoteDataSource.dart';
-import 'package:gif_navigator/features/gif_navigator/data/datasources/RestClient.dart';
+import 'package:gif_navigator/features/gif_navigator/data/datasources/gif_item_remote_data_source.dart';
+import 'package:gif_navigator/features/gif_navigator/data/datasources/rest_client.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../../../fixtures/fixture_reader.dart';

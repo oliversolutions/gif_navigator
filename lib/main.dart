@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/login/presentation/pages/LoginPage.dart';
+import 'features/login/presentation/pages/login_page.dart';
 import 'injection_container.dart' as di;
 
 Future<void> main() async {

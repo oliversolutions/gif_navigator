@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-part 'RestClient.g.dart';
+part 'rest_client.g.dart';
 
 const API_KEY = "B2fsdehjiNPc4gIokSAlu7F3YYMR1JF7";
 const LIMIT = "20";

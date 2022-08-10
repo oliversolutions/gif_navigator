@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gif_navigator/features/gif_navigator/presentation/widgets/GridWidget.dart';
+import 'package:gif_navigator/features/gif_navigator/presentation/widgets/grid_widget.dart';
 import '../../../../injection_container.dart';
 import '../bloc/gif_items_bloc.dart';
-import '../widgets/LoadingWidget.dart';
-import 'GifItemPage.dart';
+import '../widgets/loading_widget.dart';
+import 'gif_item_page.dart';
 
 class GifItemsPage extends StatefulWidget {
   static const String id = 'gif_items_page';

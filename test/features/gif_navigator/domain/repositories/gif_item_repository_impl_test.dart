@@ -2,9 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gif_navigator/core/error/Exceptions.dart';
 import 'package:gif_navigator/core/error/Failures.dart';
-import 'package:gif_navigator/features/gif_navigator/data/datasources/GifItemRemoteDataSource.dart';
-import 'package:gif_navigator/features/gif_navigator/data/repositories/GifItemRepositoryImpl.dart';
-import 'package:gif_navigator/features/gif_navigator/domain/entities/GifItem.dart';
+import 'package:gif_navigator/features/gif_navigator/data/datasources/gif_item_remote_data_source.dart';
+import 'package:gif_navigator/features/gif_navigator/data/repositories/gif_item_repository_impl.dart';
+import 'package:gif_navigator/features/gif_navigator/domain/entities/gif_item.dart';
 import 'package:mockito/mockito.dart';
 
 class MockGifItemRemoteDataSource extends Mock

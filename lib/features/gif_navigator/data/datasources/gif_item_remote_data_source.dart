@@ -1,7 +1,7 @@
-import 'package:gif_navigator/features/gif_navigator/data/datasources/RestClient.dart';
-import 'package:gif_navigator/features/gif_navigator/data/models/GifItemModel.dart';
+import 'package:gif_navigator/features/gif_navigator/data/datasources/rest_client.dart';
+import 'package:gif_navigator/features/gif_navigator/data/models/gif_item_model.dart';
 import '../../../../core/error/Exceptions.dart';
-import '../../domain/entities/GifItem.dart';
+import '../../domain/entities/gif_item.dart';
 
 abstract class GifItemRemoteDataSource {
   Future<List<GifItem>>? getGifItems(String query, String pagination);

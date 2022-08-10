@@ -1,6 +1,6 @@
-import 'package:gif_navigator/features/login/data/datasources/UserLocalDataSource.dart';
-import '../../domain/entities/User.dart';
-import '../../domain/repositories/UserRepository.dart';
+import 'package:gif_navigator/features/login/data/datasources/user_local_data_source.dart';
+import '../../domain/entities/user.dart';
+import '../../domain/repositories/user_repository.dart';
 
 class UserRepositoryImpl implements UserRepository {
 

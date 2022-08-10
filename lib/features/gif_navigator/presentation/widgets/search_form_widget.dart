@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages/GifItemsPage.dart';
+import '../pages/gif_items_page.dart';
 
 class SearchFormWidget extends StatelessWidget {
   const SearchFormWidget({Key? key}) : super(key: key);

@@ -1,4 +1,4 @@
-import 'package:gif_navigator/features/login/domain/repositories/UserRepository.dart';
+import '../repositories/user_repository.dart';
 
 class Login {
 

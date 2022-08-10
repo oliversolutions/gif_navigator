@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../../domain/entities/GifItem.dart';
-import '../../domain/usescases/GetGifItems.dart';
+import '../../domain/entities/gif_item.dart';
+import '../../domain/usescases/get_gif_items.dart';
 part 'gif_items_event.dart';
 part 'gif_items_state.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gif_navigator/features/gif_navigator/presentation/pages/SearchPage.dart';
-import 'package:gif_navigator/features/login/presentation/widgets/LoginFormWidget.dart';
+import 'package:gif_navigator/features/gif_navigator/presentation/pages/search_page.dart';
+import 'package:gif_navigator/features/login/presentation/widgets/login_form_widget.dart';
 import '../../../../injection_container.dart';
 import '../bloc/user_bloc.dart';
 
